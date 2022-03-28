@@ -16,12 +16,14 @@ library(ggplot2)
 
 ## Learning goals
 
-Understand:
+Understand:  
+
 * what is the Hardy-Weinberg (HW) principle
 * assumptions and utility in population genetics studies
 * how population structure, admixture, finite populations, and data source can impact interpretation of tests for HW equilibrium
 
 Be able to:  
+
 * test for HW equilibrium
 * estimate locus-by-locus FIS and mean FIS
 * identify potential causes of deviations from HW equilibrium
@@ -29,9 +31,11 @@ Be able to:
 
 ## Learning self-assessment questions (before):
   
-* Describe in your own words, what is the Hardy-Weinberg principle?
-* How might this principle be useful to you in understanding the health of a population of conservation concern?
-* Can you think of a scenario where it might be difficult to interpret what is the level of inbreeding in a population sample you have genotyped based on estimates of heterozygosity and FIS alone?
+Describe in your own words, what is the Hardy-Weinberg principle?  
+  
+How might this principle be useful to you in understanding the health of a population of conservation concern?  
+  
+Can you think of a scenario where it might be difficult to interpret what is the level of inbreeding in a population sample you have genotyped based on estimates of heterozygosity and FIS alone?
 
 # Background
 
@@ -41,30 +45,37 @@ At Hardy-Weinberg equilibrium, (i) allele frequencies in a population will remai
 What is the “square law”? Think of the Punnett Square you learned about in introductory genetics. Consider a single locus with two alleles A1 and A2. 
 
 Let:	
-  p = frequency of A1 allele
+  p = frequency of A1 allele  
   q = frequency of A2 allele
 
 Three genotypes are thus possible: A1A1, A1A2, and A2A2. 
-
-Let: 	
-  P = frequency of A1A1 homozygote
-	H = frequency of A1A2 heterozygote
-	Q = frequency of A2A2 homozygote
-
-From the frequencies, we can estimate allele frequencies:
-  p = P + ½ H
+  
+  
+Let:  
+  P = frequency of A1A1 homozygote  
+  H = frequency of A1A2 heterozygote  
+  Q = frequency of A2A2 homozygote
+  
+  
+From the frequencies, we can estimate allele frequencies:   
+  p = P + ½ H  
   q = Q + ½ H
-
-These frequencies will sum to 1, since there are only 2 alleles present:   p + q = 1
-
+  
+  
+These frequencies will sum to 1, since there are only 2 alleles present:  
+  p + q = 1
+  
+  
 If mating occurs at random in the population, what will be the frequencies of A1 and A2 in the next generation? It depends on the frequencies of each genotype in the parents:
-
-Table 1
-
+```{r echo=FALSE, out.width='70%'}
+knitr::include_graphics('./HW_Table1.png')
+```
+  
 The progeny produced by this set of matings would be:
-
-Table 2
-
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('./HW_Table2.png')
+```
+  
 The frequencies of the alleles have not changed, and the genotypic proportions are determined by the “square law”. For two alleles, genotypic proportions are given by expanding the term (p+q)^2.
 
 ## Assumptions of the HW principle
@@ -91,20 +102,22 @@ FIS (Nei, 1987) provides a simple way of summarizing in what direction the frequ
 FIS = 1 - (Hobs/Hexp)
 
 **Negative FIS indicates a homozygote deficit and heterozygote excess. Some of many potential causes of heterozygote excess include:**  
+
 * Small population size, this is because allele frequencies are likely to differ between sexes just due to chance.
 * Negative assortative mating when reproduction occurs between individuals bearing phenotypes more dissimilar than by chance.
 * Heterozygote advantage, something that sometimes occurs in hybrid zones
 * Selection, this can occur in cases of balancing selection, but usually occurs in only a small proportion of the genome.
 * See the list of assumptions and let your mind run!
 
-Positive FIS indicates a homozygote excess and heterozygote deficit. Some of many potential causes of heterozygote deficit include:
+**Positive FIS indicates a homozygote excess and heterozygote deficit. Some of many potential causes of heterozygote deficit include:**  
+
 * Inbreeding, this is because matings between close relatives are more likely to result in pairing even rare alleles in homozygote form.
 * Population structure, this is because of the “Wahlund effect”, where two or more subpopulations are in Hardy-Weinberg equilibrium but have different allele frequencies such that the overall heterozygosity is reduced compared to if the whole population was in equilibrium.
 * Selection, this is because alleles that have a selective advantage are more likely to be in homozygous than heterozygous form. Note that these alleles are also more likely to go to fixation unless there is clinal variation, frequency-dependence, or other processes that maintain both alleles.
 * Technical issues, for example miss-scoring of heterozygotes as homozygotes because of low next-gen sequencing read depth.
 * See the list of assumptions and think through the logical consequences!
 
-# Activity
+# In-Class Activity
 
 ## Part 1: Four Scenarios. 
 You will be split into 4 working groups (breakout rooms) A-D. Each group will be blindly assigned one of four datasets, and it is your goal to perform several analyses on these datasets and identify which dataset your group received.
