@@ -1,0 +1,44 @@
+ A) Admixture zone (substructure)
+    25 males
+    25 females
+    2 pops
+    migration .01 for both sexes
+    mutation rate 0.000001
+    mutation model 1
+    maximum diversity
+    diploid
+    500 generations
+   
+ B) Healthy population
+    150 females
+    150 males
+    1 pop
+    migration N/A
+    mutation rate 0.000001
+    mutation model 1
+    maximum diversity
+    diploid
+    100 generations
+
+ C) Small Ne (bulltrout)
+    2 males
+    2 females
+    1 pop
+    migration N/A
+    mutation rate 0.000001 
+    mutation model 1
+    maximum diversity
+    diploid
+    10 generations
+  
+D) Genome-wide association study (selection at one locus)
+    150 females
+    150 males
+    1 pop
+    migration N/A
+    mutation rate 0.000001
+    mutation model 1
+    maximum diversity
+    diploid
+    100 generations
+    1 locus changed to minor allele count of 1 manually to simulate directional selection
