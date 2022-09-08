@@ -155,20 +155,20 @@ statsD
 
 ```{r plot FIS results per locus, eval = FALSE}
 # plot the FIS per locus, remember to change "E" to match your assigned scenario
-plot(statsE$perloc$Fis,main="Scenario A",xlab = "locus", ylab = "Fis")
+plot(statsA$perloc$Fis,main="Scenario A",xlab = "locus", ylab = "Fis")
 abline(h=statsA$overall[9],col="red")
 
 # plot the FIS per locus, remember to change "E" to match your assigned scenario
-plot(statsE$perloc$Fis,main="Scenario B",xlab = "locus", ylab = "Fis")
-abline(h=statsA$overall[9],col="red")
+plot(statsB$perloc$Fis,main="Scenario B",xlab = "locus", ylab = "Fis")
+abline(h=statsB$overall[9],col="red")
 
 # plot the FIS per locus, remember to change "E" to match your assigned scenario
-plot(statsE$perloc$Fis,main="Scenario C",xlab = "locus", ylab = "Fis")
-abline(h=statsA$overall[9],col="red")
+plot(statsC$perloc$Fis,main="Scenario C",xlab = "locus", ylab = "Fis")
+abline(h=statsC$overall[9],col="red")
 
 # plot the FIS per locus, remember to change "E" to match your assigned scenario
-plot(statsE$perloc$Fis,main="Scenario D",xlab = "locus", ylab = "Fis")
-abline(h=statsA$overall[9],col="red")
+plot(statsD$perloc$Fis,main="Scenario D",xlab = "locus", ylab = "Fis")
+abline(h=statsD$overall[9],col="red")
 ```
 ## Question 3: When you look at the per-locus FIS, does anything stand out to you? Are there any loci that appear to be outliers?\newline
 

@@ -152,7 +152,7 @@ statsE
 ```{r plot FIS results per locus, eval = FALSE}
 # plot the FIS per locus, remember to change "E" to match your assigned scenario
 plot(statsE$perloc$Fis,main="Scenario E",xlab = "locus", ylab = "Fis")
-abline(h=statsA$overall[9],col="red")
+abline(h=statsE$overall[9],col="red")
 ```
 ## Question 3: When you look at the per-locus FIS, does anything stand out to you? Are there any loci that appear to be outliers?\newline
 
